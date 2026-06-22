@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cinzel;
+}
+
+/* Navbar */
+.custom-navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #222;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.enquiry-btn {
+    background: #caab3c;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.enquiry-btn:hover {
+    background: #c4912e;
+    color: #fff;
+}
+
+/* Hero */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/landingPage2.png') center center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    /* background:rgba(255,255,255,0.35); */
+}
+
+.text-content {
+    z-index: 2;
+}
+
+.text-content h1 {
+    font-size: 70px;
+    line-height: 1.2;
+    color: #111;
+    font-weight: 300;
+}
+
+.text-content span {
+    color: #caab3c;
+    ;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.explore-btn {
+    background: #005c50;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.explore-btn span {
+    color: #caab3c;
+}
+
+.explore-btn:hover {
+    background: #084843;
+    color: #fff;
+}
+
+/* Stats Bar */
+.stats-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #004f46;
+    color: #d8b46b;
+    padding: 30px 0;
+}
+
+.stat-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.why-section col-lg-2{
+border-right: 1px solid #d8b46b;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.stat-item p {
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gold-line {
+    /* width: 150px; */
+    height: 2px;
+    background: linear-gradient(to right,
+            transparent,
+            #d4af37,
+            transparent);
+    margin: 20px 0;
+}
+
+/* //////////////////////////////////////////////////// */
+
+.section-title {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.gold {
+    color: #cda349;
+}
+
+.gold-link {
+    color: #cda349;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-card {
+    border: none;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+}
+
+.project-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-card a {
+    color: #cda349;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.why-section {
+    background: #faf8f3;
+}
+
+.why-section h6 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.amenities-section {
+    background: #01463e;
+    color: #fff;
+}
+
+.btn-gold {
+    background: #cda349;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+}
+
+.btn-gold:hover {
+    background: #b48b36;
+    color: #fff;
+}
+
+.testimonial-card {
+    background: #01463e;
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.footer-section {
+    background: #013c35;
+    color: #fff;
+}
+
+.footer-section .form-control {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .2);
+    color: #fff;
+}
+
+.footer-section .form-control::placeholder {
+    color: #ddd;
+}
+
+.logo {
+    color: #cda349;
+    font-weight: 700;
+}
+
+@media(max-width:768px) {
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .project-card img {
+        height: 220px;
+    }
+
+    .testimonial-card {
+        margin-top: 20px;
+    }
+
+}
+
+
+/* Mobile */
+@media(max-width:768px) {
+
+    .text-content h1 {
+        font-size: 40px;
+    }
+
+    .stats-bar {
+        position: relative;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .pt-lg-7 {
+        padding-top: 8rem !important;
+    }
+
+    .pb-lg-7 {
+        padding-bottom: 8rem !important;
+    }
+}
