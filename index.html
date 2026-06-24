@@ -13,44 +13,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PROJECTS</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">APARTMENTS</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">VILLAS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">PLOTS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">INVESTORS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
-
-            <li class="nav-item ms-lg-4">
-              <a class="btn enquiry-btn" href="#">ENQUIRE NOW</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="header"></div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -236,9 +206,17 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4 mb-4">
-            <h2>A LIFESTYLE <br> BEYOND IMAGINATION</h2>
-            <p>World-class amenities for a life <br> of compfort, luxury and convenience</p>
-            <a class="gold-link"> EXPLORE AMENITIES <span class="fw-bolder gold"> → </span></a>
+            <h2>
+              A LIFESTYLE <br />
+              BEYOND IMAGINATION
+            </h2>
+            <p>
+              World-class amenities for a life <br />
+              of compfort, luxury and convenience
+            </p>
+            <a class="gold-link">
+              EXPLORE AMENITIES <span class="fw-bolder gold"> → </span></a
+            >
           </div>
 
           <div class="col-lg-8">
@@ -250,27 +228,42 @@
 
               <div class="col-md-2">
                 <i class="bi bi-water fs-1 gold"></i>
-                <h6>SWIMMING <br> POOL</h6>
+                <h6>
+                  SWIMMING <br />
+                  POOL
+                </h6>
               </div>
 
               <div class="col-md-2">
                 <i class="bi bi-tree fs-1 gold"></i>
-                <h6> LANDSCAPED <br> GARDENS</h6>
+                <h6>
+                  LANDSCAPED <br />
+                  GARDENS
+                </h6>
               </div>
 
               <div class="col-md-2">
                 <i class="bi bi-heart-pulse fs-1 gold"></i>
-                <h6>GYM & <br> FITNESS</h6>
+                <h6>
+                  GYM & <br />
+                  FITNESS
+                </h6>
               </div>
 
               <div class="col-md-2">
                 <i class="bi bi-balloon fs-1 gold"></i>
-                <h6>CHILDREN'S <br> PLAY AREA</h6>
+                <h6>
+                  CHILDREN'S <br />
+                  PLAY AREA
+                </h6>
               </div>
 
               <div class="col-md-2">
                 <i class="bi bi-shield-check fs-1 gold"></i>
-                <h6>24/7 <br> SECURITY</h6>
+                <h6>
+                  24/7 <br />
+                  SECURITY
+                </h6>
               </div>
             </div>
           </div>
@@ -283,11 +276,11 @@
     <section class="py-5">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <img src="./images/ourPromise.png" class="img-fluid rounded" />
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <h2 class="section-title mb-4">OUR PROMISE</h2>
 
             <h3 class="fw-normal">
@@ -300,122 +293,175 @@
               AY Homes creates iconic spaces that stand the test of time.
             </p>
           </div>
-
-          <div class="col-lg-4">
-            <div class="testimonial-card">
-              <div class="quote">
-                <i class="bi bi-quote fs-1 gold"></i>
-              </div>
-
-              <p>
-                Quality, transparency and attention to detail is truly
-                exceptional.
-              </p>
-
-              <h5 class="logo">- Ramesh S.</h5>
-              <h6 class="pb-2">HomeOwner, AY Greens</h6>
-              <span class="pt-2 d-flex gap-2" style="font-size:8px;"><i class="bi bi-circle-fill gold"> </i><i class="bi bi-circle gold"></i> <i class="bi bi-circle-fill gold"> </i><i class="bi bi-circle gold"></i> </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Testimonial  -->
 
-    <footer class="footer-section py-4">
+    <section class="testimonial-section py-5">
       <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-3">
-            <h2 class="logo">AY HOMES</h2>
-            <p>Creating iconic spaces that inspire.</p>
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-card text-center">
+                 <div class="quote">
+                  <i class="bi bi-quote fs-1 gold"></i>
+                </div>
+
+                <p>
+                  Quality, transparency and attention to detail is truly
+                  exceptional.
+                </p>
+
+                <h5 class="logo">- Vasu D.</h5>
+                <h6 class="pb-2">HomeOwner, AY Greens</h6>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                 <div class="quote">
+                  <i class="bi bi-quote fs-1 gold"></i>
+                </div>
+
+                <p>
+                  Quality, transparency and attention to detail is truly
+                  exceptional.
+                </p>
+
+                <h5 class="logo">- Dev V.</h5>
+                <h6 class="pb-2">HomeOwner, AY Greens</h6>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="carousel-item">
+              <div class="testimonial-card text-center">
+                <div class="quote">
+                  <i class="bi bi-quote fs-1 gold"></i>
+                </div>
+
+                <p>
+                  Quality, transparency and attention to detail is truly
+                  exceptional.
+                </p>
+
+                <h5 class="logo">- Ramesh S.</h5>
+                <h6 class="pb-2">HomeOwner, AY Greens</h6>
+              </div>
+            </div>
           </div>
 
-          <div class="col-lg-2">
-            <h5 class="logo">Quick Links</h5>
+          <!-- Previous -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
 
-            <ul class="list-unstyled">
-              <li>About US</li>
-              <li>Projects</li>
-              <li>Apartments</li>
-              <li>Villas</li>
-              <li>Plots</li>
-              <li>Investors</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2">
-            <h5 class="logo">Our Offerings</h5>
-
-            <ul class="list-unstyled">
-              <li>Apartments</li>
-              <li>Villas</li>
-              <li>Plots</li>
-              <li>Amenities</li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2">
-            <h5 class="logo">Get In Touch</h5>
-
-            <p>+91 9876543210</p>
-
-            <p>info@ayhomes.com</p>
-          </div>
-
-          <div class="col-lg-3">
-            <h5 class="logo">Send Enquiry</h5>
-
-            <form>
-              <input
-                type="text"
-                class="form-control mb-3"
-                placeholder="Your Name"
-              />
-
-              <input
-                type="email"
-                class="form-control mb-3"
-                placeholder="Your Email"
-              />
-
-              <input
-                type="text"
-                class="form-control mb-3"
-                placeholder="Phone"
-              />
-
-              <textarea
-                class="form-control mb-3"
-                rows="3"
-                placeholder="Message"
-              ></textarea>
-
-              <button class="btn btn-gold w-100">SUBMIT ENQUIRY</button>
-            </form>
-          </div>
-          <hr />
-        </div>
-
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p>@2024 AY Homes. All Rights Reserved</p>
-          </div>
-
-          <div class="col-md-6 text-center text-md-end">
-            <p>
-              <span class="d-inline-block border-end pe-3 me-3"
-                >Privacy Policy</span
-              >
-              Terms & Conditions
-            </p>
-          </div>
+          <!-- Next -->
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
-    </footer>
+    </section>
 
+    <div class="floating-buttons">
+      <!-- Enquiry -->
+      <a href="#enquiry" class="float-btn enquiry-btn enquiry-floating" title="Enquiry" data-bs-toggle="modal"
+   data-bs-target="#enquiryModal">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        class="float-btn whatsapp-btn"
+        title="WhatsApp"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
+
+      <!-- Chatbot -->
+      <a href="#" class="float-btn chatbot-btn" title="Chat">
+        <i class="bi bi-chat-dots-fill"></i>
+      </a>
+    </div>
+
+    <div id="footer"></div>
+
+
+    <!-- enquiry modal -->
+
+    <div class="modal fade" id="enquiryModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Enquiry Now</h5>
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form>
+                    <div class="mb-3">
+                        <input type="text"
+                            class="form-control"
+                            placeholder="Your Name"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="tel"
+                            class="form-control"
+                            placeholder="Phone Number"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email"
+                            class="form-control"
+                            placeholder="Email Address">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control"
+                            rows="4"
+                            placeholder="Message"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="btn btn-warning w-100">
+                        Submit Enquiry
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

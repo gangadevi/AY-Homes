@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Menu Button -->
+    <button
+      id="menuBtn"
+      class="menu-circle position-fixed top-0 end-0 m-3"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#menuOffcanvas"
+    >
+      ☰
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div
+      class="offcanvas offcanvas-end text-white"
+      tabindex="-1"
+      id="menuOffcanvas"
+      onshown.bs.offcanvas="document.getElementById('menuBtn').innerHTML='✕'"
+    >
+      <div class="offcanvas-body">
+        <ul class="list-unstyled mt-5">
+          <li><a href="#" class="menu-link">ABOUT US</a></li>
+          <li><a href="#" class="menu-link">PROJECTS</a></li>
+          <li><a href="#" class="menu-link">APARTMENTS</a></li>
+          <li><a href="#" class="menu-link">VILLAS</a></li>
+          <li><a href="#" class="menu-link">PLOTS</a></li>
+          <li><a href="#" class="menu-link">INVESTORS</a></li>
+          <li><a href="#" class="menu-link">CONTACT</a></li>
+          <li><a href="#" class="menu-link">ENQUIRY</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      alert("Header script loaded");
+    </script>
+  </body>
+</html>
