@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +8,13 @@
 }
 
 body {
+    animation: pageLoad 1s ease-in-out;
     font-family: cinzel;
+    overflow-x: hidden;
 }
+
+/* fade up animation for full pages */
+
 
 /* nav button */
 .offcanvas{
@@ -38,6 +46,31 @@ body {
 
 .menu-link:hover{
     color: #ffd700;
+}
+
+/* completed, ongoing tab buttons */
+.nav-pills .nav-link {
+    background: #d4af37;
+    color: #fff;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 40px;
+    min-width: 220px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background: #0B4843;
+    color: #fff;
+    border-color: #fff;
+}
+
+.nav-pills .nav-link:hover {
+    background: #0B4843;
+    color: #fff;
 }
 
 /* Navbar */
@@ -124,6 +157,141 @@ body {
     background: url('../images/aboutus.png') center center/cover no-repeat;
 }
 
+/* aboutus page */
+
+.core-color{
+    color:#0B4843;
+}
+
+.aboutus-content{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.values-section {
+    background: #f8f9fa;
+}
+
+.center-circle {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+
+.center-circle h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.value-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #d4af37;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    transition: 0.4s ease;
+}
+
+.value-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.value-card h5 {
+    font-weight: 700;
+    color: #0d1b2a;
+}
+
+.value-card p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+.journey-card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.journey-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.phase-no {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(212, 175, 55, 0.15);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.journey-card h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.journey-card h4::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #d4af37;
+    display: block;
+    margin-top: 10px;
+}
+
+.journey-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+.col-lg-3:nth-child(1) .journey-card { border-top: 4px solid #d4af37; }
+.col-lg-3:nth-child(2) .journey-card { border-top: 4px solid #198754; }
+.col-lg-3:nth-child(3) .journey-card { border-top: 4px solid #0d6efd; }
+.col-lg-3:nth-child(4) .journey-card { border-top: 4px solid #dc3545; }
+/* misson and vision */
+
+.vision-card {
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+    background: #f4b400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
 .bg-grey {
     background-color: #f2f2f2;
 }
@@ -141,13 +309,13 @@ body {
 .text-content h1 {
     font-size: 70px;
     line-height: 1.2;
-    color: #111;
+    /* color: #111; */
+    color:#084843;
     font-weight: 300;
 }
 
 .text-content span {
     color: #caab3c;
-    ;
 }
 
 .text-content p {
