@@ -68,8 +68,29 @@ counters.forEach((counter) => {
     observer.observe(counter);
 });
 
-// *************** page animations*************** //
+// *************** page animations ends*************** //
 
+// Enquiry Modal Logic
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (!sessionStorage.getItem("enquiryShown")) {
+
+        setTimeout(function () {
+
+            const enquiryModal = new bootstrap.Modal(
+                document.getElementById("enquiryModal")
+            );
+
+            enquiryModal.show();
+
+            sessionStorage.setItem("enquiryShown", "true");
+
+        }, 4000);
+
+    }
+
+});
 
 loadComponent("header", "header.html");
 loadComponent("footer", "footer.html");

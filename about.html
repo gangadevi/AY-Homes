@@ -1,26 +1,9 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Real Estate about us</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="styles/aboutus.css" />
-  <link rel="stylesheet" href="styles/style.css" />
-</head>
-
-<body>
-  <div id="header"></div>
-
-  <div class="overlay"></div>
+<div class="overlay"></div>
   <section class="about-section">
     <div class="container position-relative">
       <div class="row align-items-center min-vh-100">
         <div class="col-lg-6 text-content pt-5 pt-lg-7 pb-5 pb-lg-7 ">
-          <h1 data-aos="zoom-in" data-aos-delay="100">
+          <h1 class="core-color" data-aos="zoom-in" data-aos-delay="100">
             BUILDING HAPPY<span> HOMES</span>
           </h1>
           <div class="gold-line" data-aos="zoom-in" data-aos-delay="200"></div>
@@ -31,28 +14,34 @@
       </div>
     </div>
   </section>
-  
- <!-- // about us content -->
-
- <!-- Full Width Hero Statement -->
-<section class="about-hero d-flex align-items-center text-center">
+  <section class="bg-grey py-5 aboutus-content" data-aos="fade-up">
     <div class="container">
-        <h1 class="hero-title text-white fw-bold"">
-            Building Trust. Creating Communities. Delivering Excellence.
-        </h1>
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <h2 class="section-title gold">ABOUT US</h2>
+          <div class="gold-line" data-aos="zoom-in" data-aos-delay="200"></div>
+          <p>
+            AY Premium Homes was founded with a vision to create distinguished living spaces that combine architectural
+            brilliance, premium quality, and enduring value. Over the years, the brand has evolved into a trusted name
+            synonymous with refined lifestyles, strategic developments, and customer-first experiences.
+          </p>
+          <p>Driven by innovation and guided by integrity, AY Premium Homes continues to shape aspirational communities
+            designed for modern families and future generations.</p>
+        </div>
 
-        <p class="hero-text mt-4">
-            AY Premium Homes was founded with a vision to create distinguished living spaces that combine architectural brilliance, premium quality, and enduring value. Over the years, the brand has evolved into a trusted name synonymous with refined lifestyles, strategic developments, and customer-first experiences. <br><br>
-            Driven by innovation and guided by integrity, AY Premium Homes continues to shape aspirational communities designed for modern families and future generations.
-        </p>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <img src="./images/aboutus.png" alt="About Us Image" class="img-fluid rounded" />
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
+ 
   <section class="py-5 bg-light">
     <div class="container">
 
         <div class="text-center mb-5">
-            <h2 class="fw-bold">OUR JOURNEY OF GROWTH & EXCELLENCE</h2>
+            <h2 class="fw-bold">Our Journey of Growth & Excellence</h2>
             <p class="text-muted">
                 Milestones that shaped our success and vision.
             </p>
@@ -109,7 +98,7 @@
     </div>
 </section>
 
-  <!-- <section>
+  <section>
     <div class="container py-5">
     <div class="row align-items-center">
 
@@ -134,48 +123,7 @@
 
     </div>
 </div>
-  </section> -->
-
-
-  <section class="md-message py-5">
-    <div class="container">
-
-        <div class="message-card">
-
-            <img src="images/chairman.jpg"
-                 alt="Chairman"
-                 class="chairman-img">
-
-            <div class="message-content">
-
-                <h2 class="fw-bold mb-4">MESSAGE FROM THE MANAGING DIRECTOR</h2>
-
-                <p>
-                    AY Premium Homes, we believe that every home should reflect spacious living,
-                    aspiration, comfort, and long-term value. Our commitment goes beyond construction—we
-                    focus on uncompromising quality and creating communities that enrich lifestyles and
-                    inspire future generations.
-                </p>
-
-                <p>
-                    Built on a strong foundation of trust, transparency, and excellence, we continue to
-                    deliver developments that stand as benchmarks of premium living. Every project we
-                    undertake is guided by innovation, attention to detail, and a passion for crafting
-                    extraordinary living experiences that families can cherish for generations.
-                </p>
-
-                <h5 class="gold mt-4">
-                    — Mr. Manjunath A <br>
-                    <small>Managing Director, AY Premium Homes</small>
-                </h5>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
+  </section>
 
   <section class="py-5  bg-secondary">
     <div class="container">
@@ -259,7 +207,7 @@
             <!-- Center Circle -->
             <div class="col-lg-4 text-center">
                 <div class="center-circle">
-                    <h3 class="text-white">Values That Define Us</h3>
+                    <h3>Values That Define Us</h3>
                     <!-- <p>Building Trust.<br>Creating Excellence.</p> -->
                 </div>
             </div>
@@ -363,22 +311,3 @@
 
     </div>
 </section>
-
-
-  <div id="footer"></div>
-  <script src="./js/index.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <script>
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-in-out',
-      once: false,
-      mirror: true
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
