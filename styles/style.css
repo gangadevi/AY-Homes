@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-section{
     position: relative;
     min-height: 100vh;
-    background: url('../images/aboutus.png') center center/cover no-repeat;
+    background: url('../images/about.jpg') center center/cover no-repeat;
 }
 
 .project-section{
@@ -174,6 +174,12 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     min-height: 100vh;
     background: url('../images/contactus.png') center center/cover no-repeat;
+}
+
+.careers-section{
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/careers.png') center center/cover no-repeat;
 }
 
 /* why choose us section ends here */
@@ -476,7 +482,7 @@ border-right: 1px solid #d8b46b;
     background:#184d3d;
     color:#fff;
 }
-
+/* 
 .custom-close{
     position:absolute;
     right:20px;
@@ -485,7 +491,7 @@ border-right: 1px solid #d8b46b;
     background:#fff;
     border-radius:50%;
     padding:10px;
-}
+} */
 
 
 /* .enquiry-floating{
@@ -657,4 +663,33 @@ border-right: 1px solid #d8b46b;
 
 .contact-link:hover{
     color:#0B4843;
+}
+
+.custom-close-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#0B4843;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:1056;
+    transition:.3s;
+}
+
+.custom-close-btn:hover{
+    background:#083732;
+    transform:rotate(90deg);
+}
+
+.custom-close-btn i{
+    font-size:18px;
+    line-height:1;
 }
