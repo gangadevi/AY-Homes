@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Outfit", sans-serif;
+    font-family: "Cinzel", serif;
     font-weight: 600;
 }
 
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url('../images/villas.png') center center/cover no-repeat;
 }
 
-.contact-section{
+.contact-hero-section{
     position: relative;
     min-height: 100vh;
     background: url('../images/contactus.png') center center/cover no-repeat;
@@ -571,9 +571,6 @@ border-right: 1px solid #d8b46b;
 /*=============================
         OUR PROMISE
 ==============================*/
-
-/* OUR PROMISE */
-
 .our-promise{
     background:#f8f8f8;
 }
@@ -611,59 +608,82 @@ border-right: 1px solid #d8b46b;
 }
 
 /* // contact section */
-
-.contact-info{
+.contact-section{
     background:#f8f9fa;
 }
 
-.contact-card{
-    background:#fff;
-    border-radius:20px;
-    padding:40px 30px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-    height:100%;
+.contact-section h2{
+    color:#0B4843;
 }
 
-.contact-card:hover{
-    transform:translateY(-8px);
+.contact-item{
+    align-items:flex-start;
+    gap:20px;
 }
 
-.icon{
-    width:75px;
-    height:75px;
-    margin:0 auto 20px;
-    border-radius:50%;
+.contact-icon{
+    width:55px;
+    height:55px;
     background:#0B4843;
     color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    flex-shrink:0;
+}
+
+.contact-item h5{
+    color:#0B4843;
+    margin-bottom:6px;
+    font-family:'Cinzel', serif;
+}
+
+.contact-item p,
+.contact-item a{
+    color:#666;
+    text-decoration:none;
+}
+
+.contact-item a:hover{
+    color:#B48B36;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    background:#0B4843;
+    color:#fff;
+    border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:28px;
-}
-
-.contact-card h5{
-    color:#0B4843;
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-.contact-card p{
-    color:#666;
-    margin-bottom:15px;
-    line-height:1.7;
-}
-
-.contact-link{
-    color:#b48b36;
     text-decoration:none;
-    font-weight:600;
+    transition:0.3s;
 }
 
-.contact-link:hover{
-    color:#0B4843;
+.social-icons a:hover{
+    background:#B48B36;
+    color:#fff;
+    transform:translateY(-3px);
 }
+
+.map-wrapper{
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.12);
+}
+
+.map-wrapper iframe{
+    display:block;
+}
+/* // contact section  ends here*/
 
 .custom-close-btn{
     position:absolute;
