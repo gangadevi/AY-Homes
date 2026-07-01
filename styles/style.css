@@ -182,6 +182,11 @@ h1, h2, h3, h4, h5, h6 {
     background: url('../images/careers.png') center center/cover no-repeat;
 }
 
+.privacy-head{
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/privacy.jpg') center center/cover no-repeat;
+}
 /* why choose us section ends here */
 
 .icon-box {
@@ -712,4 +717,33 @@ border-right: 1px solid #d8b46b;
 .custom-close-btn i{
     font-size:18px;
     line-height:1;
+}
+
+/* /privacy / */
+
+/* .privacy-section{
+    background:#f8f9fa;
+} */
+
+.section-subtitle{
+    display:inline-block;
+    color:#b48b36;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.section-title{
+    color:#0B4843;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.section-description{
+    /* max-width:760px; */
+    margin:auto;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
 }

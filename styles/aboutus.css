@@ -134,7 +134,7 @@ h1, h2,h3,h4,h5,h6{
     background: #cda349;
 }
 
-.why-choose-us h2,
+
 .why-choose-us p {
     color: #fff;
 }
@@ -173,7 +173,7 @@ h1, h2,h3,h4,h5,h6{
 
 .bento-card h3,
 .bento-card h5 {
-    color: #0f172a;
+    /* color: #0f172a; */
     font-weight: 700;
     margin-bottom: 15px;
 }
