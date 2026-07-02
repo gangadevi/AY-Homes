@@ -21,10 +21,59 @@ h1, h2, h3, h4, h5, h6 {
 
 /* fade up animation for full pages */
 
+/* Fixed Transparent Header */
+        .custom-header{
+             position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1055;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 60px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.15),
+        transparent
+    );
+
+    transition: all .4s ease;
+
+    /* Glass transparent background */
+    /* background: rgba(11, 72, 67, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    transition: all .3s ease; */
+        }
+
+        /* After Scrolling */
+.custom-header.scrolled{
+     background: rgba(11,72,67,.88);
+    backdrop-filter: blur(12px);
+     /* background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px); */
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+        /* Logo */
+        .logo img{
+             height: 120px;   /* Increase to 100px if needed */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,.45));
+        }
 
 /* nav button */
 .offcanvas{
     background: #0B4843; 
+    z-index: 1065 !important;
 }
 .menu-circle {
   width: 60px;
@@ -41,6 +90,23 @@ h1, h2, h3, h4, h5, h6 {
   right: 20px;
   z-index: 2000; /* stays above offcanvas */
 }
+
+.custom-header.scrolled .menu-circle{
+    background: rgba(255,255,255,.15);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.custom-header.scrolled .menu-circle:hover{
+    background: #0B4843;
+    border-color: #0B4843;
+}
+
+/* .custom-header.scrolled .menu-circle{
+    background: rgba(255,255,255,.2);
+    color: #fff;
+    border: 2px solid #fff;
+} */
 
 .menu-link {
   color: white;
@@ -155,6 +221,31 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     min-height: 100vh;
     background: url('../images/landingPage2.png') center center/cover no-repeat;
+    overflow: hidden;
+}
+
+.hero-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;   /* Only darken the top part */
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0)
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-section  > *{
+    position: relative;
+    z-index: 2;
 }
 
 .about-section{
@@ -557,6 +648,21 @@ border-right: 1px solid #d8b46b;
 
     .promise-img{
         border-radius:15px;
+    }
+
+    /* // header  */
+     .custom-header{
+        padding:15px 20px;
+    }
+
+    .logo img{
+        height:65px;
+    }
+
+    .menu-circle{
+        width:55px;
+        height:55px;
+        font-size:24px;
     }
 }
 
