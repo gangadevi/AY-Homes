@@ -10,11 +10,13 @@ async function loadComponent(id, file) {
 }
 
 function initMenu() {
-    console.log("Menu initialized");
+    // console.log("Menu initialized");
     const menuBtn = document.getElementById("menuBtn");
     const offcanvasEl = document.getElementById("menuOffcanvas");
+    const header = document.querySelector(".custom-header");
 
-    if (!menuBtn || !offcanvasEl) return;
+
+    if (!menuBtn || !offcanvasEl || !header) return;
 
     offcanvasEl.addEventListener("shown.bs.offcanvas", () => {
         menuBtn.innerHTML = "✕";
@@ -23,6 +25,18 @@ function initMenu() {
     offcanvasEl.addEventListener("hidden.bs.offcanvas", () => {
         menuBtn.innerHTML = "☰";
     });
+
+    // Header scroll effect
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+    });
+
 }
 
 // Counter Animation starts
