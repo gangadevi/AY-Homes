@@ -1,3 +1,10 @@
+
+.careers-section{
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/OtherPages/CareerpageBanner.png') center center/cover no-repeat;
+}
+
 .career-culture{
     background:#f8f9fa;
     padding:100px 0;
@@ -235,6 +242,32 @@
     padding:30px;
 }
 
+.section-heading h2{
+    font-size:36px;
+}
+
+.job-card{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.job-right{
+    width:100%;
+    flex-direction:row;
+}
+
+.job-right a{
+    flex:1;
+}
+
+.benefits-title{
+    font-size:36px;
+}
+
+.benefit-card{
+    height:160px;
+}
+
 }
 
 /*=========================================
@@ -403,28 +436,6 @@
     Responsive
 =========================================*/
 
-@media(max-width:991px){
-
-.section-heading h2{
-    font-size:36px;
-}
-
-.job-card{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-.job-right{
-    width:100%;
-    flex-direction:row;
-}
-
-.job-right a{
-    flex:1;
-}
-
-}
-
 @media(max-width:576px){
 
 .job-right{
@@ -572,18 +583,6 @@
 .benefit-card:hover h5,
 .benefit-card:hover i{
     color:#fff;
-}
-
-@media(max-width:991px){
-
-.benefits-title{
-    font-size:36px;
-}
-
-.benefit-card{
-    height:160px;
-}
-
 }
 
 /*==================================

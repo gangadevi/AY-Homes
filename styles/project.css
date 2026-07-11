@@ -2,6 +2,14 @@
    Discover Projects Section
 ========================== */
 
+
+.project-section{
+    opacity: 0.8;
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/Project/Villaprojectbanner.png') center center/cover no-repeat;
+}
+
 .discover-projects{
     background: #F7F5F1;
     padding: 100px 0;

@@ -1,85 +1,79 @@
 async function loadComponent(id, file) {
-    const response = await fetch(file);
-    const data = await response.text();
-    document.getElementById(id).innerHTML = data;
+  const response = await fetch(file);
+  const data = await response.text();
+  document.getElementById(id).innerHTML = data;
 
-
-    if (id === "header") {
-        initMenu();
-    }
+  if (id === "header") {
+    initMenu();
+  }
 }
 
 function initMenu() {
-    // console.log("Menu initialized");
-    const menuBtn = document.getElementById("menuBtn");
-    const offcanvasEl = document.getElementById("menuOffcanvas");
-    const header = document.querySelector(".custom-header");
+  const menuBtn = document.getElementById("menuBtn");
+  const offcanvasEl = document.getElementById("menuOffcanvas");
+  const header = document.querySelector(".custom-header");
 
+  if (!menuBtn || !offcanvasEl || !header) return;
 
-    if (!menuBtn || !offcanvasEl || !header) return;
+  offcanvasEl.addEventListener("shown.bs.offcanvas", () => {
+    menuBtn.innerHTML = "✕";
+  });
 
-    offcanvasEl.addEventListener("shown.bs.offcanvas", () => {
-        menuBtn.innerHTML = "✕";
-    });
+  offcanvasEl.addEventListener("hidden.bs.offcanvas", () => {
+    menuBtn.innerHTML = "☰";
+  });
 
-    offcanvasEl.addEventListener("hidden.bs.offcanvas", () => {
-        menuBtn.innerHTML = "☰";
-    });
-
-    // Header scroll effect
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-
-    });
-
+  // Header scroll effect
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 }
 
 // Counter Animation starts
 
-const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll(".counter");
 
 const startCounter = (counter) => {
-    const target = +counter.getAttribute('data-target');
-    let count = 0;
+  const target = +counter.getAttribute("data-target");
+  let count = 0;
 
-    const updateCounter = () => {
-        const increment = Math.max(1, Math.ceil(target / 300));
+  const updateCounter = () => {
+    const increment = Math.max(1, Math.ceil(target / 300));
 
-        if (count < target) {
-            count += increment;
-            counter.innerText = count > target ? target : count;
-            setTimeout(updateCounter, 30); 
-        }else if(target === 10){
-            counter.innerText = target + 'k+';
-        }else {
-            counter.innerText = target + '+';
-        }
-    };
+    if (count < target) {
+      count += increment;
+      counter.innerText = count > target ? target : count;
+      setTimeout(updateCounter, 30);
+    } else if (target === 10) {
+      counter.innerText = target + "k+";
+    } else {
+      counter.innerText = target + "+";
+    }
+  };
 
-    updateCounter();
+  updateCounter();
 };
 
 const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                startCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.5
-    }
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  },
 );
 
 counters.forEach((counter) => {
-    observer.observe(counter);
+  observer.observe(counter);
 });
 
 // *************** page animations ends*************** //
@@ -87,23 +81,99 @@ counters.forEach((counter) => {
 // Enquiry Modal Logic
 
 document.addEventListener("DOMContentLoaded", function () {
+  if (!sessionStorage.getItem("enquiryShown")) {
+    setTimeout(function () {
+      const enquiryModal = new bootstrap.Modal(
+        document.getElementById("enquiryModal"),
+      );
 
-    if (!sessionStorage.getItem("enquiryShown")) {
+      enquiryModal.show();
 
-        setTimeout(function () {
+      sessionStorage.setItem("enquiryShown", "true");
+    }, 4000);
+  }
 
-            const enquiryModal = new bootstrap.Modal(
-                document.getElementById("enquiryModal")
-            );
+  const form = document.getElementById("contactForm");
 
-            enquiryModal.show();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            sessionStorage.setItem("enquiryShown", "true");
+    //  alert("Submit works!");
+    // Get values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-        }, 4000);
+    // Clear previous errors
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
+    document.getElementById("messageError").textContent = "";
 
+    let isValid = true;
+
+    // Name
+    if (name === "") {
+      document.getElementById("nameError").textContent = "Name is required";
+      isValid = false;
     }
 
+    // Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+      document.getElementById("emailError").textContent = "Email is required";
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("emailError").textContent = "Invalid email";
+      isValid = false;
+    }
+
+    // Phone
+    const phoneRegex = /^[6-9]\d{9}$/;
+
+    if (phone === "") {
+      document.getElementById("phoneError").textContent = "Phone is required";
+      isValid = false;
+    } else if (!phoneRegex.test(phone)) {
+      document.getElementById("phoneError").textContent =
+        "Enter a valid 10-digit phone number";
+      isValid = false;
+    }
+
+    // Message
+    if (message === "") {
+      document.getElementById("messageError").textContent =
+        "Message is required";
+      isValid = false;
+    }
+
+    if (isValid) {
+      const params = {
+        from_name: name,
+        from_email: email,
+        phone: phone,
+        message: message,
+      };
+
+      emailjs
+        .send("service_7igma8g", "template_pn4b23r", params)
+        .then(function () {
+          alert("Email sent successfully!");
+          document.getElementById("contactForm").reset();
+
+          // Close the modal
+          const modalElement = document.getElementById("enquiryModal");
+          const modal = bootstrap.Modal.getInstance(modalElement);
+          modal.hide();
+        })
+        .catch(function (error) {
+          console.log(error);
+          alert("Failed to send email.");
+        });
+    }
+  });
 });
 
 loadComponent("header", "header.html");

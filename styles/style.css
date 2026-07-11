@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     position: relative;
     min-height: 100vh;
-    background: url('../images/landingPage2.png') center center/cover no-repeat;
+    background: url('../images/HomePageSection/Banner.png') center center/cover no-repeat;
     overflow: hidden;
 }
 
@@ -248,29 +248,10 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-.about-section{
-    position: relative;
-    min-height: 100vh;
-    background: url('../images/about.jpg') center center/cover no-repeat;
-}
-
-.project-section{
-    opacity: 0.8;
-    position: relative;
-    min-height: 100vh;
-    background: url('../images/villas.png') center center/cover no-repeat;
-}
-
 .contact-hero-section{
     position: relative;
     min-height: 100vh;
-    background: url('../images/contactus.png') center center/cover no-repeat;
-}
-
-.careers-section{
-    position: relative;
-    min-height: 100vh;
-    background: url('../images/careers.png') center center/cover no-repeat;
+    background: url('../images/OtherPages/Contactus.png') center center/cover no-repeat;
 }
 
 .privacy-head{
