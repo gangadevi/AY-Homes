@@ -544,23 +544,23 @@
 
               <div class="mb-3">
                 <input type="text" class="form-control custom-input" id="name" placeholder="Full Name">
-                <span id="nameError"></span>
+                <span class="text-danger" id="nameError"></span>
               </div>
 
               <div class="mb-3">
-                <input type="tel" class="form-control custom-input" id="phone" placeholder="Phone Number">
-                 <span id="phoneError"></span>
+                <input type="tel" class="form-control custom-input" id="phone" placeholder="Phone Number" maxlength="10">
+                 <span class="text-danger" id="phoneError"></span>
               </div>
 
               <div class="mb-3">
                 <input type="email" class="form-control custom-input" id="email" placeholder="Email Address">
-                <span id="emailError"></span>
+                <span class="text-danger" id="emailError"></span>
               </div>
 
               <div class="mb-4">
                 <textarea class="form-control custom-input" rows="4" id="message"
                   placeholder="Tell us what you're looking for"></textarea>
-                   <span id="messageError"></span>
+                   <span class="text-danger" id="messageError"></span>
               </div>
 
               <button type="submit" class="btn enquiry-btn w-100">

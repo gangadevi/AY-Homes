@@ -95,6 +95,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contactForm");
 
+// Clear errors and restrict input while typing
+form.addEventListener("input", function (e) {
+
+    if (e.target.id === "name") {
+        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+        document.getElementById("nameError").textContent = "";
+    }
+
+    if (e.target.id === "email") {
+        document.getElementById("emailError").textContent = "";
+    }
+
+    if (e.target.id === "phone") {
+        e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);
+        document.getElementById("phoneError").textContent = "";
+    }
+
+    if (e.target.id === "message") {
+        document.getElementById("messageError").textContent = "";
+    }
+
+});
+
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
