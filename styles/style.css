@@ -665,6 +665,11 @@ h6 {
     height: 55px;
     font-size: 24px;
   }
+
+  .hero-carousel,
+    .carousel-item {
+        height: 37vh;
+    }
 }
 
 @media (min-width: 992px) {
@@ -678,6 +683,10 @@ h6 {
   .hero-section {
     height: 900px; /* Desktop */
   }
+  
+.carousel .carousel-inner .carousel-item {
+   height: 90vh;
+}
 }
 
 
@@ -919,4 +928,8 @@ h6 {
 .gold-btn:hover {
     color: #fff;
     border-bottom-color: #cda349;
+}
+
+.carousel .carousel-inner .carousel-item {
+   height: 135vh;
 }
