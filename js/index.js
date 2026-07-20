@@ -81,18 +81,21 @@ counters.forEach((counter) => {
 // Enquiry Modal Logic
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (!sessionStorage.getItem("enquiryShown")) {
-    setTimeout(function () {
-      const enquiryModal = new bootstrap.Modal(
-        document.getElementById("enquiryModal"),
-      );
+    
+    const enquiryModalElement  = document.getElementById("enquiryModal");
+    if(enquiryModalElement ){
+      const enquiryModal = new bootstrap.Modal(enquiryModalElement );
 
+      // Show immediately on page load
       enquiryModal.show();
 
-      sessionStorage.setItem("enquiryShown", "true");
-    }, 4000);
-  }
-
+      // After the modal is closed, show it again after 30 seconds
+      modalElement.addEventListener("hidden.bs.modal", function () {
+          setTimeout(() => {
+              enquiryModal.show();
+          }, 30000); // 30 seconds
+      });
+    }
   const form = document.getElementById("contactForm");
 
 // Clear errors and restrict input while typing
@@ -198,6 +201,51 @@ form.addEventListener("input", function (e) {
         });
     }
   });
+
+
+  const tabs = document.querySelectorAll(".tab-btn");
+        const projects = document.querySelectorAll(".project-item");
+
+        tabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                tabs.forEach(btn => btn.classList.remove("active"));
+                tab.classList.add("active");
+
+                const filter = tab.dataset.filter;
+
+                projects.forEach(project => {
+
+                    if (filter === "all") {
+                        project.style.display = "block";
+                    }
+                    else if (project.classList.contains(filter)) {
+                        project.style.display = "block";
+                    }
+                    else {
+                        project.style.display = "none";
+                    }
+
+                });
+
+            });
+
+        });
+
+
+
+// carousel 
+
+  const heroCarousel = document.querySelector("#heroCarousel");
+
+    new bootstrap.Carousel(heroCarousel, {
+        interval: 5000, // 5 seconds
+        ride: "carousel",
+        pause: false,
+        wrap: true
+    });
+
 });
 
 loadComponent("header", "header.html");

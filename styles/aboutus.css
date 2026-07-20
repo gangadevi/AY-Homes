@@ -3,7 +3,12 @@
 .about-section{
     position: relative;
     min-height: 100vh;
-    background: url('../images/OtherPages/AboutIUsHomePagebanner.png') center center/cover no-repeat;
+    background: url('../images/HomePageSection/ABoutUs.jpg') center center/cover no-repeat;
+}
+
+.visionSection {
+    min-height: 70vh;
+    /* background: url("../images/HomePageSection/ProjectPageBanner.jpg") center center/cover no-repeat; */
 }
 
 h1, h2,h3,h4,h5,h6{
@@ -296,7 +301,7 @@ h1, h2,h3,h4,h5,h6{
     line-height:1.9;
     margin-bottom:20px;
 }
-
+/* 
 .about-btn{
     background:#0B4843;
     color:#fff;
@@ -310,7 +315,7 @@ h1, h2,h3,h4,h5,h6{
     background:#B48B36;
     color:#fff;
     transform:translateY(-3px);
-}
+} */
 
 .about-image{
     overflow:hidden;
