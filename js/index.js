@@ -81,6 +81,11 @@ counters.forEach((counter) => {
 // Enquiry Modal Logic
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  const submitBtn = document.querySelector("button[type='submit']");
+
+  submitBtn.disabled = true; // Disable
+
     
     const enquiryModalElement  = document.getElementById("enquiryModal");
     if(enquiryModalElement ){
