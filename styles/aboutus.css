@@ -1,13 +1,14 @@
 /* aboutus page */
-
+/* 
 .about-section{
     position: relative;
     min-height: 100vh;
     background: url('../images/HomePageSection/ABoutUs.jpg') center center/cover no-repeat;
-}
+} */
 
 .visionSection {
-    min-height: 70vh;
+    /* min-height: 70vh; */
+    background-color: #212529;
     /* background: url("../images/HomePageSection/ProjectPageBanner.jpg") center center/cover no-repeat; */
 }
 

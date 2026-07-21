@@ -684,7 +684,7 @@ h6 {
     height: 900px; /* Desktop */
   }
   
-.carousel .carousel-inner .carousel-item {
+.hero-carousel .carousel-inner .carousel-item {
    height: 90vh;
 }
 }
@@ -908,16 +908,36 @@ h6 {
     transition: color 0.4s ease;
     z-index: 1;
 }
+.gold-btn {
+    width: 100%;
+    position: relative;
+    padding: 12px 30px;
+    background: transparent;
+    color: #0B4843;
+    border: none;
+    border-bottom: 3px solid #0B4843;
+    font-weight: 600;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    z-index: 1;
+}
 
 .gold-btn::before {
     content: "";
     position: absolute;
-    top: 0;
+    inset: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #cda349; /* Gold */
-    transition: left 0.4s ease;
+    background: linear-gradient(
+        90deg,
+        #8d6a1e 0%,
+        #cda349 25%,
+        #f5e3a1 50%,
+        #cda349 75%,
+        #8d6a1e 100%
+    );
+    transition: left 0.45s ease;
     z-index: -1;
 }
 
@@ -930,6 +950,27 @@ h6 {
     border-bottom-color: #cda349;
 }
 
-.carousel .carousel-inner .carousel-item {
+/* .gold-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #cda349; /* Gold 
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.gold-btn:hover::before {
+    left: 0;
+}
+
+.gold-btn:hover {
+    color: #fff;
+    border-bottom-color: #cda349;
+} */
+
+.hero-carousel .carousel-inner .carousel-item {
    height: 135vh;
 }

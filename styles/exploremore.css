@@ -28,7 +28,7 @@ Hero
 
     height: 100vh;
 
-    background: url("../images/apparmants.png") center/cover;
+    background: url("../images/Project/Project\ Page\ Banner.jpg.jpeg") center/cover;
 
     overflow: hidden;
 
@@ -587,7 +587,7 @@ Responsive
 
     .amenities-section {
 
-        padding: 70px 0;
+        padding: 35px 0;
 
     }
 
@@ -1053,7 +1053,7 @@ Amenities
 
 .amenities-section {
 
-    padding: 100px 0;
+    padding: 50px 0;
 
     background: #ffffff;
 

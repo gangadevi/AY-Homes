@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
       enquiryModal.show();
 
       // After the modal is closed, show it again after 30 seconds
-      modalElement.addEventListener("hidden.bs.modal", function () {
+      enquiryModalElement.addEventListener("hidden.bs.modal", function () {
           setTimeout(() => {
               enquiryModal.show();
           }, 30000); // 30 seconds
@@ -99,27 +99,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
 
 // Clear errors and restrict input while typing
-form.addEventListener("input", function (e) {
+if (form) {
+  form.addEventListener("input", function (e) {
 
-    if (e.target.id === "name") {
-        e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
-        document.getElementById("nameError").textContent = "";
-    }
+      if (e.target.id === "name") {
+          e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+          document.getElementById("nameError").textContent = "";
+      }
 
-    if (e.target.id === "email") {
-        document.getElementById("emailError").textContent = "";
-    }
+      if (e.target.id === "email") {
+          document.getElementById("emailError").textContent = "";
+      }
 
-    if (e.target.id === "phone") {
-        e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);
-        document.getElementById("phoneError").textContent = "";
-    }
+      if (e.target.id === "phone") {
+          e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);
+          document.getElementById("phoneError").textContent = "";
+      }
 
-    if (e.target.id === "message") {
-        document.getElementById("messageError").textContent = "";
-    }
+      if (e.target.id === "message") {
+          document.getElementById("messageError").textContent = "";
+      }
 
-});
+  });
 
 
   form.addEventListener("submit", function (e) {
@@ -201,7 +202,7 @@ form.addEventListener("input", function (e) {
         });
     }
   });
-
+}
 
   const tabs = document.querySelectorAll(".tab-btn");
         const projects = document.querySelectorAll(".project-item");
@@ -239,12 +240,14 @@ form.addEventListener("input", function (e) {
 
   const heroCarousel = document.querySelector("#heroCarousel");
 
+   if (heroCarousel) {
     new bootstrap.Carousel(heroCarousel, {
         interval: 5000, // 5 seconds
         ride: "carousel",
         pause: false,
         wrap: true
     });
+  }
 
 });
 
