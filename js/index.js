@@ -48,7 +48,7 @@ const startCounter = (counter) => {
       count += increment;
       counter.innerText = count > target ? target : count;
       setTimeout(updateCounter, 30);
-    } else if (target === 10) {
+    } else if (target === 2) {
       counter.innerText = target + "k+";
     } else {
       counter.innerText = target + "+";
@@ -81,13 +81,14 @@ counters.forEach((counter) => {
 // Enquiry Modal Logic
 
 document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const submitBtn = form ? form.querySelector("button[type='submit']") : null;
 
-  const submitBtn = document.querySelector("button[type='submit']");
+  if (submitBtn) {
+    submitBtn.disabled = false;
+  }
 
-  submitBtn.disabled = true; // Disable
-
-    
-    const enquiryModalElement  = document.getElementById("enquiryModal");
+  const enquiryModalElement = document.getElementById("enquiryModal");
     if(enquiryModalElement ){
       const enquiryModal = new bootstrap.Modal(enquiryModalElement );
 
@@ -101,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }, 30000); // 30 seconds
       });
     }
-  const form = document.getElementById("contactForm");
 
 // Clear errors and restrict input while typing
 if (form) {

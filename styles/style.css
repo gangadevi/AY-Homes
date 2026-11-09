@@ -603,6 +603,9 @@ h6 {
 } */
 
 @media (max-width: 768px) {
+  .footer-logo{
+    height: 120px;
+  }
    .hero-section {
       height: 70vh;
       background-position: cover;
@@ -687,6 +690,11 @@ h6 {
 .hero-carousel .carousel-inner .carousel-item {
    height: 90vh;
 }
+
+ /* .footer-logo {
+        max-width: 220px;
+        margin: 0 auto 30px;
+    } */
 }
 
 
@@ -695,6 +703,11 @@ h6 {
     height: 55vh;
    /* // background-position: center; */
   }
+/* 
+  .footer-logo {
+        max-width: 180px;
+        margin: 0 auto 25px;
+    } */
 }
 /*=============================
         OUR PROMISE
@@ -973,4 +986,35 @@ h6 {
 
 .hero-carousel .carousel-inner .carousel-item {
    height: 135vh;
+}
+
+/* 
+.footer-logo {
+    width: 100%;
+    max-width: 280px;   /* Desktop size 
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+} */
+
+/* Large Desktop */
+/* @media (min-width: 1400px) {
+    .footer-logo {
+        max-width: 320px;
+    }
+} */
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .footer-logo {
+        max-width: 240px;
+    }
+}
+
+.footer-logo{
+    /* max-width:280px; */
+    height: 180px;
 }
